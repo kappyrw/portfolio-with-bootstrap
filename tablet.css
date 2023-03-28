@@ -1,0 +1,10 @@
+@media( max-width: 768){
+    #home{
+        width: 50%;
+
+    }
+    img{
+        width: 50%;
+    }
+}
+   
