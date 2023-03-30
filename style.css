@@ -90,22 +90,36 @@ navbar */
     padding: 10px 35px;
     background-color: transparent;
     border: 1px solid white;
-    color: black;
+    color: white;
     outline: none;
     transition: .6s ease;
     text-decoration: none;
 }
-.btn a{
+/* .btn a{
     text-decoration: none;
 }
 .btn:hover{
  cursor: pointer;   
- background-color: rgb(143, 141, 141);
+ background-color: white;
  color:black;
  box-shadow: 0 0 5px white,0 0 10px white,0 0 15px white;
  font-weight: bold;
-}
+} */
 
+.btn:hover{
+    text-align: none;;
+    cursor: pointer;   
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+  }
+  
+  .btn:hover a{
+    text-align: none;
+    color: black;
+  }
+  
 
 /* about section */
 
@@ -122,7 +136,7 @@ navbar */
 }
 #pic img{
     width: 575px;
-    height: 400px;
+    height: 655px;
 }
 #intro{
     display: flex;
@@ -134,6 +148,7 @@ navbar */
 #intro h2{
     font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 4;
 }
 /* 
 portfolio section */
@@ -182,7 +197,7 @@ portfolio section */
     text-align: justify;
     padding: 10px;
     border-radius: 15px;
-    background: linear-gradient(to top, rgb(255,45,45) 50%, white 50%);
+    background: linear-gradient(to top, #0b0e13 50%, white 50%);
     background-size: 100% 200%;
     transition: .8s;
 }
@@ -190,7 +205,7 @@ portfolio section */
     background-position: left bottom;
     color: white;
     border: none;
-    box-shadow: 0 0 20px rgb(255,45,45);
+    box-shadow: 0 0 20px black;
 }
 
 .box img{
@@ -302,5 +317,6 @@ contact section */
 
 .jj{
     text-align: none;
-    color: white;
+    color:black;
+    color:white;
 }
