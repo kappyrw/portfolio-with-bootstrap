@@ -343,6 +343,107 @@ contact section */
       font-size: 16px;
       cursor: pointer;
     }
+    /* Set the font family and size for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Set the width of the content area */
+  #about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the headings */
+  .headings {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the profile picture */
+  #pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  /* Style the introduction section */
+  #intro {
+    margin-top: 20px;
+  }
+  
+  /* Style the name */
+  #intro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the paragraphs */
+  #intro p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the subheadings */
+  #intro h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add spacing after subheadings */
+  #intro h3 + p {
+    margin-top: 0;
+  }
+  
+  /* Style the education section */
+  #intro h3:last-of-type {
+    margin-top: 40px;
+  }
+  
+  /* Add padding to the form */
+  .form {
+    padding: 20px;
+  }
+  
+  /* Style the form inputs */
+  .input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Style the form textarea */
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Style the form submit button */
+  #send {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Add hover effect to the form submit button */
+  #send:hover {
+    background-color: #0062cc;
+  }
+  
   }
   
   
