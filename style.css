@@ -456,3 +456,37 @@ body {
     color:black;
     color:white;
 }
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; /* Center-align the content */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center; /* Center-align the icons */
+    gap: 20px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Center-align the copyright text */
+.footer-content .copyright {
+    margin-top: 10px;
+}
+
