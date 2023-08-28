@@ -492,3 +492,14 @@ footer {
 .social-icon:hover {
     transform: scale(1.1);
 }
+
+.todo {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.todo:hover {
+  text-decoration: underline;
+}
+
