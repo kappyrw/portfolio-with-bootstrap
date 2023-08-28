@@ -479,9 +479,14 @@ footer {
     /* Remove the default link styling */
     text-decoration: none;
     color: #fff;
-    font-family: Arial, sans-serif; /* Change the font */
+    font-family: Arial, sans-serif;
     font-size: 18px;
     transition: transform 0.3s;
+}
+
+.social-icon img {
+    width: 20px; /* Adjust the width to make the icons smaller */
+    height: 20px; /* Adjust the height to make the icons smaller */
 }
 
 .social-icon:hover {
