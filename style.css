@@ -461,7 +461,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
-    text-align: center; /* Center-align the content */
+    text-align: center;
 }
 
 .footer-content {
@@ -471,21 +471,19 @@ footer {
 
 .social-media {
     display: flex;
-    justify-content: center; /* Center-align the icons */
+    justify-content: center;
     gap: 20px;
 }
 
-.social-icon img {
-    width: 30px;
-    height: 30px;
+.social-icon {
+    /* Remove the default link styling */
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, sans-serif; /* Change the font */
+    font-size: 18px;
     transition: transform 0.3s;
 }
 
-.social-icon img:hover {
+.social-icon:hover {
     transform: scale(1.1);
-}
-
-/* Center-align the copyright text */
-.footer-content .copyright {
-    margin-top: 10px;
 }
