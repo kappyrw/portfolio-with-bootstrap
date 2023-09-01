@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contactForm");
+    const form = document.querySelector("form");
+    const nameInput = document.querySelector("input[name='name']");
+    const emailInput = document.querySelector("input[name='emeil']"); // Typo in the HTML attribute, should be 'email'
+    const messageInput = document.querySelector("textarea[name='msg']");
+    const sendButton = document.getElementById("send");
     const globalError = document.getElementById("globalError");
 
     form.addEventListener("submit", function (event) {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const message = messageInput.value;
 
         const nameError = document.getElementById("nameError");
         const emailError = document.getElementById("emailError");
@@ -36,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
             globalError.textContent = "Please fill in all required fields.";
+            event.preventDefault();
         }
     });
 
