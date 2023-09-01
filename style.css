@@ -1,88 +1,92 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-html {
-    scroll-behavior: smooth;
+html{
+  scroll-behavior: smooth;  
 }
+/* 
+navbar */
 
-/* Navbar */
-.navbar {
+.navbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0,0,0,0.5);
     position: sticky;
     top: 0;
 }
 
-.navbar ul {
+.navbar ul{
     display: flex;
     list-style: none;
     margin: 20px 0px;
 }
-
-.navbar ul li {
-    font-family: century;
-    font-size: 1.1rem;
-    font-weight: bold;
+.navbar ul li{
+ font-family: century; 
+ font-size:1.1rem ;
+ font-weight: bold;
 }
 
-.navbar ul li a {
+.navbar ul li a{
     text-decoration: none;
     color: white;
     padding: 8px 20px;
     transition: all .5s ease;
 }
 
-.navbar ul li a:hover {
-    background-color: white;
-    color: black;
-    box-shadow: 0 0 10px white;
+.navbar ul li a:hover{
+   background-color: white;
+   color: black; 
+   box-shadow: 0 0 10px white;
 }
 
-/* Home section */
-#home {
+/* home section */
+
+#home{
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    height: 840px;
     justify-content: center;
     align-items: center;
     color: white;
-    padding: 40px 0;
 }
 
-#home::before {
+#home::before{
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    background: url('ka.jpg') no-repeat center;
-    height: 100%;
+  /*    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), */
+  background:   url('ka.jpg') no-repeat center;
+    /* background:linear-gradient() url('ka.jpg') ; */
+    
+    height: 900px;
     width: 100%;
-    z-index: -1;
-    opacity: 0.8;
-}
+    z-index:  -1;
+    opacity: .8;
 
-.main {
+}
+.main{
     display: flex;
     flex-direction: column;
+    /* border: 1px solid white; */
     align-items: center;
-    text-align: center;
-    max-width: 800px;
+    position: absolute;
+    top:30%;
+    right: 10%;
 }
 
-.headings {
-    font-family: century;
-    font-size: 2rem;
-    text-align: center;
-    margin: 20px 0;
+.headings{
+   font-family: century; 
+   font-size: 3rem;
+   text-align: center;
+   margin: 40px 220px;
 }
 
-.btn {
+.btn{
     padding: 10px 35px;
     background-color: transparent;
     border: 1px solid white;
@@ -91,89 +95,102 @@ html {
     transition: .6s ease;
     text-decoration: none;
 }
+/* .btn a{
+    text-decoration: none;
+}
+.btn:hover{
+ cursor: pointer;   
+ background-color: white;
+ color:black;
+ box-shadow: 0 0 5px white,0 0 10px white,0 0 15px white;
+ font-weight: bold;
+} */
 
-.btn:hover {
-    cursor: pointer;
+.btn:hover{
+    text-align: none;;
+    cursor: pointer;   
     background-color: white;
     color: black;
     box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
     font-weight: bold;
-}
+  }
+  
+  .btn:hover a{
+    text-align: none;
+    color: black;
+  }
+  
 
-/* About section */
-#about {
-    display: flex;
+/* about section */
+
+#about{
+    display:flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
+    margin-bottom: 50px;
 }
 
-#pic {
+#pic{
     display: flex;
-    flex-wrap: wrap;
 }
-
-#pic img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+#pic img{
+    width: 575px;
+    height: 655px;
 }
-
-#intro {
+#intro{
+    display: flex;
+    flex-direction: column;
     text-align: justify;
     padding: 10px;
-    max-width: 800px;
-    margin: 20px auto;
 }
 
-#intro h2 {
-    font-size: 1.5rem;
+#intro h2{
+    font-size: 2rem;
     margin-bottom: 20px;
+    margin-top: 4;
 }
+/* 
+portfolio section */
 
-/* Portfolio section */
-#portfolio {
+#portfolio{
     display: flex;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0,0,0,0.9);
     color: white;
-    align-items: center;
-    padding: 20px;
+   align-items: center;
+ padding: 20px;
 }
 
-.gallery {
-    display: flex;
+.gallery{
+    display: flex ;
     flex-wrap: wrap;
     justify-content: space-around;
     box-sizing: border-box;
 }
-
-.gallery img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 10px;
+.gallery img{
+    width: 360px;
+    height: 240px;
+    margin: 10px;;
 }
+/* services section */
 
-/* Services section */
-#services {
+ 
+#services{
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
-
-.row {
+.row{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-.box {
+.box{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    width: 350px;
+    height: 450px;
     border: 1px solid black;
     margin: 10px;
     align-items: center;
@@ -184,73 +201,262 @@ html {
     background-size: 100% 200%;
     transition: .8s;
 }
-
-.box:hover {
+.box:hover{
     background-position: left bottom;
     color: white;
     border: none;
     box-shadow: 0 0 20px black;
 }
 
-.box img {
-    width: 80px;
+.box img{
+    width: 80 px;
     height: 80px;
     background-color: white;
     padding: 10px;
 }
+/* 
+contact section */
 
-/* Contact section */
-#contact {
+#contact{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0,0,0,0.9);
     color: white;
     padding: 20px;
-}
 
-.form {
+}
+.form{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
     margin: 20px 0px;
 }
-
-.input {
+.input{
     padding: 12px;
     margin: 15px;
-    width: 100%;
+    width: 30%;
     border: none;
     outline: none;
 }
-
-#msg {
-    width: 100%;
-    padding: 10px;
-    margin: 15px;
-    border: none;
-    outline: none;
+#msg{
+ width: 20%;
+ padding: 10px;
+ margin: 15px;
+ border: none;
+ outline: none;
+ 
 }
-
-#send {
+#send{
     padding: 10px;
     margin: 4px;
-    width: 50%;
-    max-width: 200px;
+    width: 10%;
     border: none;
     outline: none;
-    background-color: #007bff;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+
+/* For screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 767px) {
+    #about {
+        /* background-color: red; */
+      padding: 20px;
+    }
+    
+    #pic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    #pic img {
+      max-width: 100%;
+    }
+    
+    #intro {
+      text-align: center;
+      margin-top: 20px;
+    }
+.navbar ul li a{
+    text-decoration: none;
     color: white;
+    padding: 3px 6px;
+    transition: all .5s ease;
+}
+.navbar ul li{
+    font-family: century; 
+    font-size:0.7rem ;
+    font-weight: 400;
+   }
+
+
+   .navbar ul li a:hover{
+    background-color: white;
+    color: black; 
+    box-shadow: 0 0 10px white;
+ }
+ .headings{
+    font-family: century; 
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 40px 0px;
+ }
+
+ .btn a{
+    text-decoration: none;
+  }
+  /* CSS for small devices */
+
+    /* Center headings */
+    .headings {
+      text-align: center;
+    }
+  
+    /* Adjust form input styles */
+    .form input,
+    .form textarea {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  
+    /* Adjust submit button styles */
+    #send {
+      display: block;
+      margin: 20px auto;
+      width: 50%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    /* Set the font family and size for the entire document */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Set the width of the content area */
+  #about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Style the headings */
+  .headings {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the profile picture */
+  #pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  /* Style the introduction section */
+  #intro {
+    margin-top: 20px;
+  }
+  
+  /* Style the name */
+  #intro h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the paragraphs */
+  #intro p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the subheadings */
+  #intro h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add spacing after subheadings */
+  #intro h3 + p {
+    margin-top: 0;
+  }
+  
+  /* Style the education section */
+  #intro h3:last-of-type {
+    margin-top: 40px;
+  }
+  
+  /* Add padding to the form */
+  .form {
+    padding: 20px;
+  }
+  
+  /* Style the form inputs */
+  .input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Style the form textarea */
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Style the form submit button */
+  #send {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-}
-
-#send:hover {
+  }
+  
+  /* Add hover effect to the form submit button */
+  #send:hover {
     background-color: #0062cc;
-}
+  }
+  
+  }
+  
+  
 
-/* Footer */
+  
+
+
+.jj{
+    text-align: none;
+    color:black;
+    color:white;
+}
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
@@ -270,6 +476,7 @@ footer {
 }
 
 .social-icon {
+    /* Remove the default link styling */
     text-decoration: none;
     color: #fff;
     font-family: Arial, sans-serif;
@@ -278,8 +485,8 @@ footer {
 }
 
 .social-icon img {
-    width: 20px;
-    height: 20px;
+    width: 20px; /* Adjust the width to make the icons smaller */
+    height: 20px; /* Adjust the height to make the icons smaller */
 }
 
 .social-icon:hover {
@@ -287,40 +494,11 @@ footer {
 }
 
 .todo {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .todo:hover {
-    text-decoration: underline;
-}
-
-/* Media query for screens smaller than 768px */
-@media (max-width: 767px) {
-    .navbar ul li a {
-        font-size: 0.7rem;
-    }
-
-    .headings {
-        font-size: 1.5rem;
-        margin: 40px 0;
-    }
-
-    .btn a {
-        text-decoration: none;
-    }
-
-    .form input,
-    .form textarea {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-    }
-
-    #send {
-        display: block;
-        margin: 20px auto;
-        width: 50%;
-    }
+  text-decoration: underline;
 }
