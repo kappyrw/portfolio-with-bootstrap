@@ -1,3 +1,6 @@
+
+function formValidation()
+{
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const nameInput = document.querySelector("input[name='name']");
@@ -43,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
         }
     });
-
+}
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
