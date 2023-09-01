@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
+    const globalError = document.getElementById("globalError");
 
     form.addEventListener("submit", function (event) {
         const name = document.getElementById("name").value;
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         nameError.textContent = "";
         emailError.textContent = "";
         messageError.textContent = "";
+        globalError.textContent = "";
 
         if (name.trim() === "") {
             nameError.textContent = "Name is required";
@@ -30,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (message.trim() === "") {
             messageError.textContent = "Message is required";
             event.preventDefault();
+        }
+
+        if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+            globalError.textContent = "Please fill in all required fields.";
         }
     });
 
