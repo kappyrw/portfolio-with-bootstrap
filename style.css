@@ -248,17 +248,24 @@ contact section */
  outline: none;
  
 }
-#send{
+/* Add this CSS for the SEND button */
+#send {
     padding: 10px;
     margin: 4px;
     width: 10%;
     border: none;
     outline: none;
-}
-#send:hover{
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 0 10px white;
+    transition: background-color 0.3s; /* Add a smooth background color transition */
 }
+
+#send:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+
 
 
 /* For screens smaller than 768px (e.g., mobile devices) */
