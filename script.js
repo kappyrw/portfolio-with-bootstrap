@@ -1,22 +1,40 @@
-function sendDataToServer() {
-    const formData = new FormData(form);
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
 
-    emailjs.init("ys-tUEoTEGxuKvpCA"); // 
+    form.addEventListener("submit", function (event) {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
 
-    const templateParams = {
-        to_email: "kappyrwanda@gmail.com",
-        from_name: formData.get("name"),
-        from_email: formData.get("emeil"),
-        message: formData.get("msg")
-    };
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const messageError = document.getElementById("messageError");
 
-    emailjs.send("ys-tUEoTEGxuKvpCA", "template_n5tmq4p", templateParams)
-        .then(function(response) {
-            console.log("Email sent:", response);
-            alert("Message sent successfully!");
-        })
-        .catch(function(error) {
-            console.error("Error sending email:", error);
-            alert("Error sending message.");
-        });
-}
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
+
+        if (name.trim() === "") {
+            nameError.textContent = "Name is required";
+            event.preventDefault();
+        }
+
+        if (email.trim() === "") {
+            emailError.textContent = "Email is required";
+            event.preventDefault();
+        } else if (!isValidEmail(email)) {
+            emailError.textContent = "Invalid email format";
+            event.preventDefault();
+        }
+
+        if (message.trim() === "") {
+            messageError.textContent = "Message is required";
+            event.preventDefault();
+        }
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});
