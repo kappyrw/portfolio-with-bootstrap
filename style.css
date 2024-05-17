@@ -509,3 +509,11 @@ footer {
 .todo:hover {
   text-decoration: underline;
 }
+ 
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    
+}

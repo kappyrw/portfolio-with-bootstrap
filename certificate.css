@@ -1,0 +1,33 @@
+/* Container Styles */
+
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* PDF List Styles */
+  
+  .pdf-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pdf-list li {
+    margin-bottom: 10px;
+  }
+  
+  .pdf-list a {
+    text-decoration: none; /* Remove underline */
+    color: black;
+  }
+  
+  .pdf-list a:hover {
+    color: #007bff; /* Blue on hover */
+  }
+  
