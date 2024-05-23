@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="my-projects.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="lightbox.js"></script>
 </head>
 <body>
     <header>
@@ -16,28 +18,65 @@
     <section>
         <h2>Graphic Design Categories</h2>
         
-        <div class="category">
+        <!-- Buttons for each category -->
+        <div class="categories">
+            <button onclick="showCategory('logos')">Logos</button>
+            <button onclick="showCategory('flyers')">Flyers</button>
+        </div>
+        
+        <!-- Logos category -->
+        <div class="category" id="logos" style="display:none;">
             <h3>Logos</h3>
             <div class="grid">
-                <img src="logo1.jpg" alt="Logo 1">
-                <img src="logo2.jpg" alt="Logo 2">
-                <img src="logo3.jpg" alt="Logo 3">
-                <img src="logo4.jpg" alt="Logo 4">
+                <a href="alx_certificate.png" data-lightbox="logos" data-title="Company Logo">
+                    <img src="alx_certificate.png" alt="Company Logo">
+                    <span>Company Logo</span>
+                </a>
+                <a href="alx_certificate.png" data-lightbox="logos" data-title="Creative Minds Logo">
+                    <img src="alx_certificate.png" alt="Creative Minds Logo">
+                    <span>Creative Minds Logo</span>
+                </a>
+                <a href="alx_certificate.png" data-lightbox="logos" data-title="Tech Solutions Logo">
+                    <img src="alx_certificate.png" alt="Tech Solutions Logo">
+                    <span>Tech Solutions Logo</span>
+                </a>
+                <a href="alx_certificate.png" data-lightbox="logos" data-title="Global Ventures Logo">
+                    <img src="alx_certificate.png" alt="Global Ventures Logo">
+                    <span>Global Ventures Logo</span>
+                </a>
             </div>
         </div>
         
-        <div class="category">
+        <!-- Flyers category -->
+        <div class="category" id="flyers" style="display:none;">
             <h3>Flyers</h3>
             <div class="grid">
-                <img src="flyer1.jpg" alt="Flyer 1">
-                <img src="flyer2.jpg" alt="Flyer 2">
-                <img src="flyer3.jpg" alt="Flyer 3">
-                <img src="flyer4.jpg" alt="Flyer 4">
+                <a href="alx_certificate.png" data-lightbox="flyers" data-title="Event Flyer">
+                    <img src="alx_certificate.png" alt="Event Flyer">
+                    <span>Event Flyer</span>
+                </a>
+                <a href="alx_certificate.png" data-lightbox="flyers" data-title="Sale Flyer">
+                    <img src="alx_certificate.png" alt="Sale Flyer">
+                    <span>Sale Flyer</span>
+                </a>
+                <a href="alx_certificate.png" data-lightbox="flyers" data-title="Conference Flyer">
+                    <img src="alx_certificate.png" alt="Conference Flyer">
+                    <span>Conference Flyer</span>
+                </a>
+                <a href="alx_certificate.png" data-lightbox="flyers" data-title="Special Offer Flyer">
+                    <img src="alx_certificate.png" alt="Special Offer Flyer">
+                    <span>Special Offer Flyer</span>
+                </a>
             </div>
         </div>
-        
-        <!-- Add more categories as needed -->
-        
+
     </section>
+    <script>
+        function showCategory(category) {
+            document.getElementById('logos').style.display = 'none';
+            document.getElementById('flyers').style.display = 'none';
+            document.getElementById(category).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
