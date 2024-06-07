@@ -14,118 +14,109 @@
         <a href="index.html">Home</a>
     </nav>
     <section>
-        <h2>Graphic Design Categories</h2>
-        
-        <div class="categories">
-            <button onclick="showCategory('logos')">Logos</button>
-            <button onclick="showCategory('flyers')">Flyers</button>
-        </div>
-        
-        <div class="category" id="logos" style="display:none;">
-            <h3>Logos</h3>
-            <div class="grid">
-                <a href="doi.png" data-lightbox="logos" data-title="Company Logo">
-                    <img src="doi1.png" alt="Company Logo">
-                    <span>Company Logo</span>
-                </a>
-                <a href="doi2.png" data-lightbox="logos" data-title="Creative Minds Logo">
-                    <img src="doi3.png" alt="Creative Minds Logo">
-                    <span>Creative Minds Logo</span>
-                </a>
-                <a href="doi4.png" data-lightbox="logos" data-title="Tech Solutions Logo">
-                    <img src="doi5.png" alt="Tech Solutions Logo">
-                    <span>Tech Solutions Logo</span>
-                </a>
-                <a href="doi6.png" data-lightbox="logos" data-title="Global Ventures Logo">
-                    <img src="doi7.png" alt="Global Ventures Logo">
-                    <span>Global Ventures Logo</span>
-                </a>
+        <h2>Portfolio</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="1.png" style="width:100%">
             </div>
-        </div>
-        
-        <div class="category" id="flyers" style="display:none;">
-            <h3>Flyers</h3>
-            <div class="grid">
-                <a href="salad_Vella.png" data-lightbox="flyers" data-title="Event Flyer">
-                    <img src="salad_Vella.png" alt="Event Flyer">
-                    <span>Event Flyer</span>
-                </a>
-                <a href="salad_Vella.png" data-lightbox="flyers" data-title="Sale Flyer">
-                    <img src="salad_Vella.png" alt="Sale Flyer">
-                    <span>Sale Flyer</span>
-                </a>
-                <a href="salad_Vella.png" data-lightbox="flyers" data-title="Conference Flyer">
-                    <img src="salad_Vella.png" alt="Conference Flyer">
-                    <span>Conference Flyer</span>
-                </a>
-                <a href="salad_Vella.png" data-lightbox="flyers" data-title="Special Offer Flyer">
-                    <img src="salad_Vella.png" alt="Special Offer Flyer">
-                    <span>Special Offer Flyer</span>
-                </a>
+            <div class="mySlides fade">
+                <img src="2.png" style="width:100%">
             </div>
+            <div class="mySlides fade">
+                <img src="3.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="4.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="5.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="6.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="7.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="8.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="9.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="10.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="11.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="12.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="13.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="14.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="15.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(4)"></span> 
+            <span class="dot" onclick="currentSlide(5)"></span> 
+            <span class="dot" onclick="currentSlide(6)"></span> 
+            <span class="dot" onclick="currentSlide(7)"></span> 
+            <span class="dot" onclick="currentSlide(8)"></span> 
+            <span class="dot" onclick="currentSlide(9)"></span> 
+            <span class="dot" onclick="currentSlide(10)"></span> 
+            <span class="dot" onclick="currentSlide(11)"></span> 
+            <span class="dot" onclick="currentSlide(12)"></span> 
+            <span class="dot" onclick="currentSlide(13)"></span> 
+            <span class="dot" onclick="currentSlide(14)"></span> 
+            <span class="dot" onclick="currentSlide(15)"></span> 
         </div>
     </section>
 
-    <!-- Lightbox HTML structure -->
-    <div id="lightboxOverlay" class="lightboxOverlay"></div>
-    <div id="lightbox" class="lightbox">
-        <img id="lightboxImage" src="" alt="">
-        <div class="caption"></div>
-        <a id="downloadBtn" class="download-btn" href="#" download>Download</a>
-        <span id="closeBtn" class="close-btn">Close</span>
-        <textarea id="commentBox" class="comment-box" placeholder="Leave a comment..."></textarea>
-        <button id="sendBtn" class="send-btn">Send</button>
-    </div>
-
     <script>
-        function showCategory(category) {
-            document.getElementById('logos').style.display = 'none';
-            document.getElementById('flyers').style.display = 'none';
-            document.getElementById(category).style.display = 'block';
+        let slideIndex = 0;
+        showSlides();
+
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const lightboxOverlay = document.getElementById('lightboxOverlay');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImage = document.getElementById('lightboxImage');
-            const caption = lightbox.querySelector('.caption');
-            const downloadBtn = document.getElementById('downloadBtn');
-            const closeBtn = document.getElementById('closeBtn');
-            const sendBtn = document.getElementById('sendBtn');
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
 
-            document.querySelectorAll('.grid a').forEach(anchor => {
-                anchor.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const imgSrc = anchor.getAttribute('href');
-                    const imgAlt = anchor.querySelector('img').getAttribute('alt');
-                    const imgTitle = anchor.getAttribute('data-title');
-                    lightboxImage.setAttribute('src', imgSrc);
-                    lightboxImage.setAttribute('alt', imgAlt);
-                    caption.textContent = imgTitle;
-                    downloadBtn.setAttribute('href', imgSrc);
-                    lightboxOverlay.style.display = 'block';
-                    lightbox.style.display = 'block';
-                });
-            });
-
-            lightboxOverlay.addEventListener('click', function() {
-                lightboxOverlay.style.display = 'none';
-                lightbox.style.display = 'none';
-            });
-
-            closeBtn.addEventListener('click', function() {
-                lightboxOverlay.style.display = 'none';
-                lightbox.style.display = 'none';
-            });
-
-            sendBtn.addEventListener('click', function() {
-                const comment = document.getElementById('commentBox').value;
-                alert('Comment sent: ' + comment);
-                document.getElementById('commentBox').value = '';
-                lightboxOverlay.style.display = 'none';
-                lightbox.style.display = 'none';
-            });
-        });
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (slideIndex >= slides.length) {slideIndex = 0}
+            if (slideIndex < 0) {slideIndex = slides.length - 1}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex].style.display = "block";
+            dots[slideIndex].className += " active";
+            slideIndex++;
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
     </script>
 </body>
 </html>
