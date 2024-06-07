@@ -14,8 +14,8 @@
         <a href="index.html">Home</a>
     </nav>
     <section>
-        <h2>Portfolio</h2>
-        <div class="slideshow-container">
+      <center><h2>Portfolio</h2></center>  
+        <div class="slideshow-container" id="slideshow">
             <div class="mySlides fade">
                 <img src="1.png" style="width:100%">
             </div>
@@ -88,7 +88,7 @@
 
     <script>
         let slideIndex = 0;
-        showSlides();
+        let userScrolling = false;
 
         function plusSlides(n) {
             slideIndex += n;
@@ -114,9 +114,25 @@
             }
             slides[slideIndex].style.display = "block";
             dots[slideIndex].className += " active";
-            slideIndex++;
-            setTimeout(showSlides, 5000); // Change image every 5 seconds
+
+            if (!userScrolling) {
+                slideIndex++;
+                setTimeout(showSlides, 3000); // Change image every 3 seconds
+            }
         }
+
+        document.getElementById('slideshow').addEventListener('wheel', function(event) {
+            if (event.deltaY < 0) {
+                plusSlides(-1); // Scroll up
+            } else {
+                plusSlides(1); // Scroll down
+            }
+            userScrolling = true;
+            clearTimeout(userScrolling);
+            userScrolling = setTimeout(() => { userScrolling = false; }, 5000);
+        });
+
+        showSlides();
     </script>
 </body>
 </html>
